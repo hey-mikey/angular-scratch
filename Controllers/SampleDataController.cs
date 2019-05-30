@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
 
 namespace angular_scratch.Controllers
@@ -11,6 +12,8 @@ namespace angular_scratch.Controllers
         private static readonly string[] Summaries = {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
+
+        private static readonly string apiKey = "925b3133ad4b22dadb2575f10d778c31";
 
         [HttpGet("[action]")]
         public IEnumerable<WeatherForecast> WeatherForecasts()
@@ -30,6 +33,7 @@ namespace angular_scratch.Controllers
             public int TemperatureC { get; set; }
             public string Summary { get; set; }
 
+            [UsedImplicitly]
             public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
         }
     }
