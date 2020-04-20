@@ -9,9 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "querystringify": "^2.1.1"
+    "querystringify": "^2.1.1",
+    "serialize-javascript": ">=2.1.1"
   },
-  "dependencies": {
-  "serialize-javascript": ">=2.1.1"
-}
+  "devDependencies": {
+    "kind-of": "^6.0.3"
+  }
 }
